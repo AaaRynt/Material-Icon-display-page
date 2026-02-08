@@ -1,6 +1,6 @@
 <template>
   <div class="flex-center min-h-screen font-mono duration-1000" :style="{ backgroundColor: color, color: fontColor }">
-    <small class="vue absolute top-1 right-1 font-extrabold">{{ svgAll[selected].length }}</small>
+    <small class="vue fixed top-1 right-1 font-extrabold">{{ svgAll[selected].length }}</small>
 
     <main class="grid" :style="{ width: range + '%', gridTemplateColumns: `repeat(${num}, minmax(0, 1fr))` }" ref="mainRef">
       <img
@@ -14,6 +14,7 @@
 
     <nav class="fixed bottom-4 flex items-center gap-2 rounded-full px-4 py-0.5 shadow-lg/50 backdrop-blur-xs">
       <input type="color" v-model="color" class="rounded-4xl" />
+      <!-- <:-P>Yeah... Why I use <select> but not <checkbox>?</:-P> -->
       <select v-model="selected" class="w-28 rounded-sm text-center text-xs outline-1">
         <option disabled value="">Please select one</option>
         <option v-for="value in Object.keys(svgAll)" :key="value" :value="value">{{ value }}</option>
