@@ -42,16 +42,13 @@ import { shuffle } from './utils/Fisher–Yates'
 
 const svgAll = reactive(svgRaw)
 const color = ref<string>('#282c34')
-const selected = ref<keyof typeof svgAll>('Files')
-const num = ref<number>(30)
-const range = ref<number>(80)
+const selected = ref<keyof typeof svgAll>('Material-Icon')
+const num = ref<number>(71)
+const range = ref<number>(90)
 const fontColor = computed((): string => {
+  const invert = (hex: string) => (255 - parseInt(hex, 16)).toString(16).padStart(2, '0')
   const hex = color.value.slice(1)
-  const r = (255 - parseInt(hex.substring(0, 2), 16)).toString(16).padStart(2, '0')
-  const g = (255 - parseInt(hex.substring(2, 4), 16)).toString(16).padStart(2, '0')
-  const b = (255 - parseInt(hex.substring(4, 6), 16)).toString(16).padStart(2, '0')
-
-  return `#${r}${g}${b}`
+  return `#${invert(hex.slice(0, 2))}${invert(hex.slice(2, 4))}${invert(hex.slice(4, 6))}`
 })
 
 // GENERATE BY GPT-5.2
