@@ -50,11 +50,10 @@ const fontColor = computed((): string => {
   const hex = color.value.slice(1)
   return `#${invert(hex.slice(0, 2))}${invert(hex.slice(2, 4))}${invert(hex.slice(4, 6))}`
 })
-
-// GENERATE BY GPT-5.2
 const remove = (value: string): void => {
   svgAll[selected.value] = svgAll[selected.value].filter((v) => v !== value)
 }
+// GENERATE BY GPT-5.2
 const mainRef = ref<HTMLElement | null>(null)
 
 const download = async () => {
