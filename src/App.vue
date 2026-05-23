@@ -5,7 +5,7 @@
     <main class="grid" :style="{ width: range + '%', gridTemplateColumns: `repeat(${num}, minmax(0, 1fr))` }" ref="mainRef">
       <img
         v-for="value in svgAll[selected]"
-        :src="`https://raw.githubusercontent.com/AaaRynt/vscode-material-icon-theme/e6bc94766159101048d2503314357500eb4d2659/icons/${value}`"
+        :src="`https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/1c8d1f38c8f5ab044633fce63a169291eed1ea83/icons/${value}`"
         :alt="value"
         :key="value"
         @click="remove(value)"
@@ -67,7 +67,8 @@ const download = async () => {
           img.crossOrigin = 'anonymous' // 跨域处理
           img.onload = () => resolve(img)
           img.onerror = (e) => reject(e)
-          img.src = `https://raw.githubusercontent.com/AaaRynt/vscode-material-icon-theme/e6bc94766159101048d2503314357500eb4d2659/icons/${name}`
+          img.alt = name
+          img.src = `https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/1c8d1f38c8f5ab044633fce63a169291eed1ea83/icons/${name}`
         }),
     ),
   )
