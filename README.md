@@ -1,12 +1,6 @@
 # Material Icon display page
 
-<p align="center">
-  <a href="https://github.com/material-extensions/vscode-material-icon-theme?tab=readme-ov-file">
-    <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/logo.png" alt="logo" width="120" />
-  </a>
-</p>
-
-A simple page to display both **files** and **folders** [icons](https://github.com/material-extensions/vscode-material-icon-theme/tree/main/icons) based upon [Material Icon Theme](https://github.com/material-extensions/vscode-material-icon-theme?tab=readme-ov-file).
+A simple page to display both **files** and **folders** icons based upon [Material Icon](https://github.com/material-extensions/vscode-material-icon-theme?tab=readme-ov-file) and [VS Code Icon](https://github.com/vscode-icons/vscode-icons)
 
 ## Winter Vacation Musings
 
